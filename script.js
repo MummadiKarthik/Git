@@ -1,20 +1,25 @@
-function Animal(name){
+function Animal(name, species) {
     this.name = name;
+    this.species = species;
 }
-Animal.prototype.speak = function(){
-    console.log(this.name + ' makes a noise.');
-}
-function Dog(name, breed){
-    Animal.call(this, name);
+
+Animal.prototype.getInfo = function() {
+    return `Name: ${this.name}, Species: ${this.species}`;
+}   
+
+function Dog(name, breed) {
+    Animal.call(this, name, 'Dog');
     this.breed = breed;
 }
-Dog.prototype.speak = function(){
-    console.log(this.name + ' barks.');
+Dog.prototype=Object.create(Animal.prototype);
+Dog.prototype.constructor=Dog;
+
+Dog.prototype.makeSound=function(){
+    console.log("Woof! Woof!");
 }
-Dog.prototype = Object.create(Animal.prototype);
-Dog.prototype.constructor = Dog;    
+let s=new Animal("Buddy","Dog");
+console.log(s.getInfo());
 
-let s=new Animal('Rex');
-s.speak(); // Output: Rex makes a noise.
-
-//in this we have created a prototypal inheritance where the Dog class inherits from the Animal class. The Dog class has its own speak method that overrides the speak method of the Animal class. When we create an instance of Dog and call the speak method, it will output "Rex barks." instead of "Rex makes a noise."
+let a=new Dog("Smmofk","Labrador");
+console.log(a.getInfo());
+a.makeSound();
