@@ -1,31 +1,28 @@
-class Karthik{
-    constructor(name, age){
-        this.name=name;
-        this.age=age;
-    }
-    view(){
-        console.log(`name is ${this.name} and age is ${this.age}`);
-    }
+// first class function
+
+function greet(name) {  
+    console.log("Hello " + name);
 }
-class Karthik1 extends Karthik{
-    constructor(name, age, id){
-        super(name, age);
-        this.id=id;
-    }   
-    view(){
-        console.log(`name is ${this.name}, age is ${this.age}, and id is ${this.id}`);
+
+function bro(call){
+    call("karthik");
+}
+bro(greet);
+
+function bro2(){
+    return function(name){
+        console.log("Hello " + name);
     }
 }
-class Karthik2 extends Karthik{
-    constructor(name, age, id, role){
-        super(name, age, id);
-        this.role=role;
-    }   
-    view(){
-        console.log(`name is ${this.name}, age is ${this.age}, id is ${this.id}, and role is ${this.role}`);
-    }   
-}
-let karthik=[new Karthik("karthik", 24), new Karthik1("suresh", 25, 123), new Karthik2("rajesh", 26, 124, "developer")];
-karthik.forEach((item)=>{
-    item.view();
-});
+let d=bro2();
+d("karthik");
+
+let sa=(a,b)=>a+b
+console.log(sa(24,35))
+
+let daf=[function(){
+    console.log("function 1")
+},function(){
+    console.log("function 2")
+}]
+console.log(daf[0]())
