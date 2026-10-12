@@ -1,4 +1,14 @@
- 
+
+let s=new Date(2020,12,14,15,56,30)
+console.log(s);
+console.log(s.getFullYear())
+console.log(s.getMonth())
+console.log(s.getDate())
+console.log(s.getDay())
+console.log(s.getHours())
+console.log(s.getMinutes())
+
+console.log(s.getSeconds())
 
 let sa=[1,45,235,6];
 let a=sa.sort((a, b) => b - a);
