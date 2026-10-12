@@ -1,5 +1,5 @@
  
-
+//new york
 let sa=[1,45,235,6];
 let a=sa.sort((a, b) => b - a);
 console.log(sa)
