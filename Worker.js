@@ -1,29 +1,28 @@
-//new jersey
-let as=new Date(2020,11,14,15,56,30)
-console.log(as)
-console.log(as);
-console.log(as.getFullYear())
-console.log(as.getMonth())
-console.log(as.getDate())
-console.log(as.getDay())
-console.log(as.getHours())
-console.log(as.getMinutes())
-
-console.log(as.getSeconds())
-
-console.log(as.toDateString())
-console.log(as.toTimeString())
-console.log(as.toLocaleDateString())    
-console.log(as.toISOString())
-console.log(as.toUTCString())
+ 
 let sa=[1,45,235,6];
 let a=sa.sort((a, b) => b - a);
+console.log(sa.every((s)=>s>23))
 console.log(sa)
 // we have added a function to add two numbers
 let s=(a,b)=>a+b;
 console.log(s(24,34))
+ 
+//object chain
 
-
+let as={
+    id:23,
+    name:"karthik",
+    details:{
+        age:4,
+        roll:41,
+        collge:{
+            name:"MRits",
+            adderess:"Hyderabad"
+        }
+    }
+}
+console.log(as.name)
+console.log(as.details.age)
 //hello bro
 
 //decorator function
@@ -57,3 +56,8 @@ console.log(ssa.next())
 console.log(ssa.next())
 console.log(ssa.next())
 console.log(ssa.next())
+
+
+let ad=null;
+let adf=ad??"default"
+console.log(adf)

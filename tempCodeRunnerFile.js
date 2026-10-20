@@ -1,1 +1,1 @@
-"karthik",45
+console.log(sa.some((s)=>s>23))
