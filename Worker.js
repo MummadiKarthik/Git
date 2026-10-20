@@ -61,3 +61,11 @@ console.log(ssa.next())
 let ad=null;
 let adf=ad??"default"
 console.log(adf)
+
+//maps and sets
+
+let map=new Map([["name","karthik"],["id",244],["college","mrits"]]);
+console.log(map.size)
+console.log(map.get("name"))
+map.delete("name")
+console.log(map)
