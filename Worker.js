@@ -41,3 +41,27 @@ console.log(ssa.next())
 console.log(ssa.next())
 console.log(ssa.next())
 console.log(ssa.next())
+
+//prototypal inheritance
+
+function Animal(name){
+    this.name=name;
+}
+Animal.prototype.sound=function(){
+    console.log("Animal is making sound")
+}
+
+function Dog(name,id){
+    Animal.call(this, name)
+    this.id=id;
+}
+Dog.prototype=Object.create(Animal.prototype)
+
+Dog.prototype.bark=function(){
+    console.log(this.name+" makes sound")
+}
+Dog.prototype.constructor=Dog;
+let fr=new Animal("Dragon")
+fr.sound();
+let sdf=new Dog("Spooki",23)
+sdf.bark()
