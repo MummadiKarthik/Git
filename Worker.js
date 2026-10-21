@@ -1,4 +1,8 @@
  
+<<<<<<< HEAD
+=======
+//new york
+>>>>>>> feature
 let sa=[1,45,235,6];
 let a=sa.sort((a, b) => b - a);
 console.log(sa.every((s)=>s>23))
@@ -69,3 +73,26 @@ console.log(map.size)
 console.log(map.get("name"))
 map.delete("name")
 console.log(map)
+//prototypal inheritance
+
+function Animal(name){
+    this.name=name;
+}
+Animal.prototype.sound=function(){
+    console.log("Animal is making sound")
+}
+
+function Dog(name,id){
+    Animal.call(this, name)
+    this.id=id;
+}
+Dog.prototype=Object.create(Animal.prototype)
+
+Dog.prototype.bark=function(){
+    console.log(this.name+" makes sound")
+}
+Dog.prototype.constructor=Dog;
+let fr=new Animal("Dragon")
+fr.sound();
+let sdf=new Dog("Spooki",23)
+sdf.bark()
