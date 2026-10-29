@@ -2,12 +2,28 @@
 //new york
 let sa=[1,45,235,6];
 let a=sa.sort((a, b) => b - a);
+console.log(sa.every((s)=>s>23))
 console.log(sa)
 // we have added a function to add two numbers
 let s=(a,b)=>a+b;
 console.log(s(24,34))
+ 
+//object chain
 
-
+let as={
+    id:23,
+    name:"karthik",
+    details:{
+        age:4,
+        roll:41,
+        collge:{
+            name:"MRits",
+            adderess:"Hyderabad"
+        }
+    }
+}
+console.log(as.name)
+console.log(as.details.age)
 //hello bro
 
 //decorator function
@@ -42,6 +58,13 @@ console.log(ssa.next())
 console.log(ssa.next())
 console.log(ssa.next())
 
+
+let ad=null;
+let adf=ad??"default"
+console.log(adf)
+
+ 
+ 
 //prototypal inheritance
 
 function Animal(name){
@@ -65,3 +88,9 @@ let fr=new Animal("Dragon")
 fr.sound();
 let sdf=new Dog("Spooki",23)
 sdf.bark()
+sdf.bark()
+
+let sas=new Map([["name","karthik"],["id",34],["roll",24]]);
+sas.delete("name")
+console.log(sas)
+

@@ -1,1 +1,1 @@
-"karthik",45
+resolve
