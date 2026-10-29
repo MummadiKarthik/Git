@@ -1,8 +1,5 @@
  
-<<<<<<< HEAD
-=======
 //new york
->>>>>>> feature
 let sa=[1,45,235,6];
 let a=sa.sort((a, b) => b - a);
 console.log(sa.every((s)=>s>23))
@@ -66,13 +63,8 @@ let ad=null;
 let adf=ad??"default"
 console.log(adf)
 
-//maps and sets
-
-let map=new Map([["name","karthik"],["id",244],["college","mrits"]]);
-console.log(map.size)
-console.log(map.get("name"))
-map.delete("name")
-console.log(map)
+ 
+ 
 //prototypal inheritance
 
 function Animal(name){
@@ -96,3 +88,8 @@ let fr=new Animal("Dragon")
 fr.sound();
 let sdf=new Dog("Spooki",23)
 sdf.bark()
+
+let sas=new Map([["name","karthik"],["id",34],["roll",24]]);
+sas.delete("name")
+console.log(sas)
+

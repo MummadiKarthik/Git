@@ -1,27 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
 <body>
-<h1>JavaScript JSON</h1>
-<h2>The response.json() Method</h2>
-<p>The response.json() method parses the JSON text and returns a JavaScript value.</p>
-
-<p id="demo"></p>
-
+  <button onclick="kar()" id="btn">Click</button>
+  <video src="" controls autoplay muted></video>
+<input type="file" name="kar" id="file">
 <script>
-async function loadJSON() {
-  const response = await fetch("customer.json");
-  const customer = await response.json();
-  myDisplayer(customer.name);
-  myDisplayer(customer.city);
-}
-
-loadJSON();
-
-// Function to display any text
-function myDisplayer(text) {
-  document.getElementById("demo").innerHTML += text + "<br>";
-}
-</script>
-
+ navigator.mediaDevices.getUserMedia({
+    video:true,
+    audio:true,
+ }).then((stream)=>document.querySelector("video").srcObject=stream)
+    </script>
 </body>
 </html>
