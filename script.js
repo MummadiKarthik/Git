@@ -1,5 +1,23 @@
+ //first class function
+
+ let ad=(a,b)=>a+b;
+ console.log(ad(23,24))
  
- 
+ function kar(a){
+   return function(b){
+    return a+b;
+   }
+ }
+ let g=kar(24);
+ console.log(g(33))
+
+ let as=[function(){
+    console.log("function 1")
+ },function(){
+    console.log("function 2")
+
+ }]
+ as[0]()
 function Animal(name, species) {
     this.name = name;
     this.species = species;
@@ -25,4 +43,4 @@ console.log(s.getInfo());
 let a=new Dog("Smmofk","Labrador");
 console.log(a.getInfo());
 a.makeSound();
->>>>>>> feature
+ 
