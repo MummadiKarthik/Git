@@ -88,6 +88,7 @@ let fr=new Animal("Dragon")
 fr.sound();
 let sdf=new Dog("Spooki",23)
 sdf.bark()
+sdf.bark()
 
 let sas=new Map([["name","karthik"],["id",34],["roll",24]]);
 sas.delete("name")

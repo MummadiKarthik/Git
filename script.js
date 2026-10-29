@@ -43,4 +43,5 @@ console.log(s.getInfo());
 let a=new Dog("Smmofk","Labrador");
 console.log(a.getInfo());
 a.makeSound();
+a.makeSound();
  
